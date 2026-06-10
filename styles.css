@@ -1187,3 +1187,49 @@ main { padding: 0 clamp(10px, 1.2vw, 18px); }
   .stat span { max-width: 120px; }
   .chat__follow { padding-left: 0; }
 }
+
+/* ---------- кейс Mini App ---------- */
+.botcase--miniapp {
+  margin-top: clamp(10px, 1.2vw, 18px);
+  background: radial-gradient(110% 130% at 80% 16%, #1f2b33 0%, #1c1c1f 58%, #141416 100%);
+  min-height: 460px;
+}
+.botcase__mock--app { max-width: 340px; padding: 0; overflow: hidden; gap: 0; }
+.app__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: #232327;
+  border-bottom: 1px solid #2f2f35;
+  font-size: 14px;
+  color: #f2f4f8;
+}
+.app__back, .app__dots { color: #7c8190; font-size: 18px; }
+.app__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 16px;
+}
+.app__tile {
+  background: #232327;
+  border: 1px solid #2f2f35;
+  border-radius: 14px;
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.app__tile b { color: #f2f4f8; font-size: 14px; font-weight: 600; }
+.app__tile span { color: #7c8190; font-size: 12px; }
+.app__cta {
+  margin: 0 16px 16px;
+  background: var(--green);
+  color: #11271d;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  padding: 14px;
+  border-radius: 12px;
+}

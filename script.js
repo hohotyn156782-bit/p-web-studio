@@ -3,10 +3,18 @@
 /* ---------- бургер-меню ---------- */
 const burger = document.getElementById('burgerBtn');
 const menu = document.getElementById('menuOverlay');
+burger.setAttribute('aria-expanded', 'false');
 burger.addEventListener('click', () => {
-  document.body.classList.toggle('menu-open');
-  menu.setAttribute('aria-hidden', String(!document.body.classList.contains('menu-open')));
+  const open = document.body.classList.toggle('menu-open');
+  menu.setAttribute('aria-hidden', String(!open));
+  burger.setAttribute('aria-expanded', String(open));
 });
+
+/* ---------- подложка шапки при скролле ---------- */
+const headerEl = document.querySelector('.header');
+addEventListener('scroll', () => {
+  headerEl.classList.toggle('scrolled', scrollY > 40);
+}, { passive: true });
 menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   document.body.classList.remove('menu-open');
   menu.setAttribute('aria-hidden', 'true');
@@ -51,8 +59,41 @@ const chatInitialFeed = chatFeed.innerHTML;
 const BOT_REPLIES = {
   'Боты и автоматизация': 'Отличный выбор! Telegram-бот — от 5 000 ₽, срок от 2 дней. Парсеры, авто-воронки, оплата, CRM — всё умеем. Напишите <a class="chat__link" href="https://t.me/BaronPavel" target="_blank" rel="noopener">@BaronPavel</a> — за вечер прикинем смету.',
   'Сайт или лендинг': 'Супер! Лендинг — от 30 000 ₽ и от 3 дней, магазин или платформа — обсудим объём. Дизайн с нуля, без шаблонов — как в кейсах выше. Пишите <a class="chat__link" href="https://t.me/BaronPavel" target="_blank" rel="noopener">@BaronPavel</a> — посчитаем точно.',
-  'Просто хочу сделать красиво': 'Это к нам :) Красиво — наша базовая комплектация. Расскажите пару слов о проекте в <a class="chat__link" href="https://t.me/BaronPavel" target="_blank" rel="noopener">Telegram</a>, а мы предложим 2–3 варианта, как это может выглядеть.'
+  'Просто хочу сделать красиво': 'Это к нам :) Красиво — наша базовая комплектация. Расскажите пару слов о проекте в <a class="chat__link" href="https://t.me/BaronPavel" target="_blank" rel="noopener">Telegram</a>, а мы предложим 2–3 варианта, как это может выглядеть.',
+  'Просто хочу автоматизировать рутину': 'Любимая задача. Расскажите, что съедает время — отчёты, заявки, посты, переписка? Подберём бота, который заберёт это на себя. Пишите <a class="chat__link" href="https://t.me/BaronPavel" target="_blank" rel="noopener">@BaronPavel</a>.'
 };
+
+const FOLLOWUPS = {
+  'Сколько стоит?': 'Бот — от 5 000 ₽, лендинг — от 30 000 ₽, магазин или платформа — по брифу. Цену фиксируем до старта, без доплат в процессе.',
+  'Какие сроки?': 'Бот — от 2 дней, лендинг — от 3, магазин — от пары недель. Срок называем до старта и держим.',
+  'А поддержка будет?': 'Будет. Хостинг, обновления, новые функции — берём на себя, пока мы вам нужны. Сами писали — сами и сопровождаем.'
+};
+
+function chatFollowups() {
+  const row = document.createElement('div');
+  row.className = 'chat__follow';
+  Object.keys(FOLLOWUPS).forEach(q => {
+    const b = document.createElement('button');
+    b.textContent = q;
+    b.addEventListener('click', () => {
+      row.classList.add('chat__follow--done');
+      chatPush(q, 'user');
+      setTimeout(() => {
+        chatPush(FOLLOWUPS[q] + ' Обсудить детали: <a class="chat__link" href="https://t.me/BaronPavel" target="_blank" rel="noopener">@BaronPavel</a>', 'bot');
+        chatFollowups();
+      }, 600);
+    });
+    row.appendChild(b);
+  });
+  const tg = document.createElement('a');
+  tg.href = 'https://t.me/BaronPavel';
+  tg.target = '_blank';
+  tg.rel = 'noopener';
+  tg.textContent = 'Перейти в Telegram ↗';
+  row.appendChild(tg);
+  chatFeed.appendChild(row);
+  chatFeed.scrollTop = chatFeed.scrollHeight;
+}
 
 function chatPush(text, who) {
   const wrap = document.createElement('div');
@@ -68,12 +109,15 @@ function chatPush(text, who) {
 function chatPick(label) {
   chatPush(label, 'user');
   chatChoices.style.display = 'none';
-  setTimeout(() => chatPush(BOT_REPLIES[label], 'bot'), 600);
+  setTimeout(() => {
+    chatPush(BOT_REPLIES[label], 'bot');
+    chatFollowups();
+  }, 600);
 }
 
 chatChoices.querySelectorAll('.chat__choice').forEach(btn =>
   btn.addEventListener('click', () => chatPick(btn.dataset.pick)));
-chatChip.addEventListener('click', () => chatPick('Просто хочу сделать красиво'));
+chatChip.addEventListener('click', () => chatPick(chatChip.textContent.trim()));
 chatRestart.addEventListener('click', () => {
   chatFeed.innerHTML = chatInitialFeed;
   chatChoices.style.display = '';
@@ -138,5 +182,32 @@ if (window.gsap && window.ScrollTrigger) {
         scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom top', scrub: 1.2 }
       });
     });
+
+    /* счётчики статистики в hero */
+    document.querySelectorAll('.stat [data-count]').forEach(el => {
+      const target = parseInt(el.dataset.count, 10);
+      const obj = { v: 0 };
+      gsap.to(obj, {
+        v: target,
+        duration: 1.4,
+        delay: .7,
+        ease: 'power2.out',
+        onUpdate: () => { el.textContent = Math.round(obj.v); }
+      });
+    });
+
+    /* магнитные кнопки (только desktop с мышью) */
+    if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      document.querySelectorAll('.btn--primary, .btn--light, .btn--dark, .navbar__order').forEach(btn => {
+        const xTo = gsap.quickTo(btn, 'x', { duration: .4, ease: 'power3.out' });
+        const yTo = gsap.quickTo(btn, 'y', { duration: .4, ease: 'power3.out' });
+        btn.addEventListener('mousemove', e => {
+          const r = btn.getBoundingClientRect();
+          xTo((e.clientX - r.left - r.width / 2) * .25);
+          yTo((e.clientY - r.top - r.height / 2) * .35);
+        });
+        btn.addEventListener('mouseleave', () => { xTo(0); yTo(0); });
+      });
+    }
   }
 }

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Студия {P} | Боты и автоматизация — Telegram-боты, парсеры, авто-воронки</title>
+<meta name="description" content="Студия {P}: Telegram-боты, парсеры, авто-воронки и интеграции под ключ. Бот от 5 000 ₽ и от 2 дней. Работает 24/7 и собирает заявки, пока вы спите.">
+<meta property="og:title" content="Студия {P} | Боты и автоматизация">
+<meta property="og:description" content="Telegram-боты, парсеры, авто-воронки и интеграции под ключ. Бот от 5 000 ₽ и от 2 дней.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hohotyn156782-bit.github.io/p-web-studio/bots.html">
+<meta property="og:image" content="https://hohotyn156782-bit.github.io/p-web-studio/shots/venom-ink.jpg">
+<link rel="icon" type="image/png" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-dark">
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="header__inner">
+    <a class="header__logo" href="index.html" aria-label="Студия {P}">
+      <span class="logo-mark"><span class="logo-brace">{</span>P<span class="logo-brace">}</span></span>
+    </a>
+    <nav class="header__switch" aria-label="Направления">
+      <a href="index.html" class="switch__tab">Сайты</a>
+      <a href="index.html" class="switch__knob switch__knob--bots" aria-label="Переключить на сайты">
+        <svg width="16" height="16" viewBox="0 0 100 100" fill="currentColor"><path d="M50 0c4 28 18 42 50 50-32 8-46 22-50 50-4-28-18-42-50-50 32-8 46-22 50-50Z"/></svg>
+      </a>
+      <a href="bots.html" class="switch__tab switch__tab--active">Боты</a>
+    </nav>
+    <button class="header__burger" id="burgerBtn" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== MENU OVERLAY ===== -->
+<div class="menu" id="menuOverlay" aria-hidden="true">
+  <nav class="menu__nav">
+    <a href="#hero" class="menu__link">Боты</a>
+    <a href="#gallery" class="menu__link">Кейсы</a>
+    <a href="#qa" class="menu__link">Вопросы</a>
+    <a href="#why" class="menu__link">Почему мы</a>
+    <a href="#estimate" class="menu__link">Оценка проекта</a>
+    <a href="index.html" class="menu__link">→ Веб-студия</a>
+  </nav>
+  <div class="menu__contacts">
+    <a href="https://t.me/BaronPavel" target="_blank" rel="noopener">@BaronPavel</a>
+    <a href="https://kwork.ru/user/baronpavel" target="_blank" rel="noopener">kwork.ru/user/baronpavel</a>
+    <a class="btn btn--primary" href="https://t.me/BaronPavel" target="_blank" rel="noopener">Оставить заявку</a>
+  </div>
+</div>
+
+<main id="top">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero section-card hero--bots" id="hero">
+    <div class="hero__content">
+      <h1 class="hero__label">Боты и автоматизация</h1>
+      <p class="hero__title">
+        <span class="line">Собираем Telegram-ботов,</span>
+        <span class="line">которые работают 24/7</span>
+        <span class="line">и приносят заявки сами</span>
+      </p>
+      <a href="#gallery" class="btn btn--light hero__cta">Смотреть все кейсы</a>
+    </div>
+    <div class="hero__visual" aria-hidden="true">
+      <div class="phone" data-float="1">
+        <div class="phone__bar"><span class="phone__ava"><span class="logo-brace">{</span>P<span class="logo-brace">}</span></span><span class="phone__name">Бот студии<br><em>онлайн</em></span></div>
+        <div class="phone__feed">
+          <div class="bubble bubble--bot">Привет! Чем займёмся: бот, парсер или воронка?</div>
+          <div class="bubble bubble--user">Нужен бот для записи клиентов</div>
+          <div class="bubble bubble--bot">Принято. Запись, напоминания, оплата — соберу за 3 дня. Считаю смету…</div>
+          <div class="bubble bubble--bot bubble--typing"><i></i><i></i><i></i></div>
+        </div>
+        <span class="pill-label pill-label--phone-tr">Отвечает за 2 секунды</span>
+      </div>
+      <div class="term" data-float="2">
+        <div class="term__bar"><i></i><i></i><i></i><span>lead-hunter.log</span></div>
+        <div class="term__body">
+          <p><span class="t-dim">02:14</span> <span class="t-green">+ лид</span> «нужен бот для магазина»</p>
+          <p><span class="t-dim">03:47</span> <span class="t-green">+ лид</span> «парсер цен конкурентов»</p>
+          <p><span class="t-dim">07:02</span> <span class="t-green">+ лид</span> «авто-воронка в TG»</p>
+          <p><span class="t-dim">08:30</span> отправлено владельцу → <span class="t-green">✓</span></p>
+        </div>
+        <span class="pill-label pill-label--br">Работает, пока вы спите</span>
+      </div>
+      <svg class="hero__spark hero__spark--green-dim" width="120" height="120" viewBox="0 0 100 100" fill="#2a2d2c">
+        <path d="M50 0c4 28 18 42 50 50-32 8-46 22-50 50-4-28-18-42-50-50 32-8 46-22 50-50Z"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== FILTERS + GALLERY ===== -->
+  <section class="gallery" id="gallery">
+    <div class="filters reveal">
+      <span class="filter">Telegram-боты</span>
+      <span class="filter">Парсеры</span>
+      <span class="filter">Авто-воронки</span>
+      <span class="filter">Магазины в TG</span>
+      <span class="filter">Mini Apps</span>
+      <span class="filter">AI-боты</span>
+      <span class="filter">Автопостинг</span>
+      <span class="filter">Интеграции</span>
+    </div>
+
+    <a class="case case--wide botcase botcase--visitka reveal" href="https://t.me/Pavel_digital_business_bot" target="_blank" rel="noopener">
+      <div class="botcase__mock">
+        <div class="bubble bubble--bot">Здравствуйте! Я приму заявку и посчитаю смету за минуту</div>
+        <div class="bubble bubble--user">Хочу лендинг + бота</div>
+        <div class="bubble bubble--bot">Отличная связка. Лендинг от 30к, бот от 5к. Передаю Паше →</div>
+        <div class="botcase__chips"><i>AI-приоритизация</i><i>Mini App</i><i>Заявки в DM 24/7</i></div>
+      </div>
+      <div class="case__text">
+        <p class="case__note">Принимает заявки даже при выключенном компьютере. Наш собственный</p>
+        <p class="case__title">Бот-визитка студии</p>
+      </div>
+    </a>
+
+    <div class="case-row">
+      <a class="case botcase botcase--hunter reveal" href="https://t.me/BaronPavel" target="_blank" rel="noopener">
+        <div class="botcase__mock botcase__mock--term">
+          <p><span class="t-dim">208 чатов</span> · <span class="t-dim">246 ключевых слов</span></p>
+          <p class="t-green">→ найден заказ: «нужен сайт визитка»</p>
+          <p class="t-green">→ найден заказ: «бот для записи»</p>
+          <p><span class="t-dim">AI-фильтр:</span> релевантно ✓</p>
+        </div>
+        <div class="case__text">
+          <p class="case__note">Парсер заказов: мониторит 200+ чатов и 6 бирж разом</p>
+          <p class="case__title">Lead Hunter</p>
+        </div>
+      </a>
+      <a class="case botcase botcase--gifts reveal" href="https://t.me/BaronPavel" target="_blank" rel="noopener">
+        <div class="botcase__mock botcase__mock--cards">
+          <div class="g-card"><b>Astral Shard</b><span>Tonnel → Portals</span><em class="t-green">+12,4%</em></div>
+          <div class="g-card"><b>Lol Pop</b><span>Portals → Tonnel</span><em class="t-green">+8,1%</em></div>
+        </div>
+        <div class="case__text">
+          <p class="case__note">Кросс-маркет арбитраж NFT-подарков с расчётом чистой прибыли</p>
+          <p class="case__title">Gift Arbitrage Bot</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="case-row case-row--uneven">
+      <a class="case botcase botcase--content reveal" href="https://t.me/BaronPavel" target="_blank" rel="noopener">
+        <div class="botcase__mock botcase__mock--feed">
+          <div class="f-row"><i>VK</i><span>Пост опубликован · 09:00</span><em class="t-green">✓</em></div>
+          <div class="f-row"><i>VK</i><span>Пост опубликован · 14:00</span><em class="t-green">✓</em></div>
+          <div class="f-row"><i>TG</i><span>Отчёт владельцу · 21:00</span><em class="t-green">✓</em></div>
+        </div>
+        <div class="case__text">
+          <p class="case__note">Автопостинг в соцсети на полном автопилоте. Контент сам себя публикует</p>
+          <p class="case__title">Content Engine</p>
+        </div>
+      </a>
+      <a class="case botcase botcase--funnel reveal" href="https://t.me/BaronPavel" target="_blank" rel="noopener">
+        <div class="botcase__mock botcase__mock--funnel">
+          <div class="fu-step">Подписка<b>100%</b></div>
+          <div class="fu-step">Прогрев<b>64%</b></div>
+          <div class="fu-step fu-step--hot">Оплата<b>18%</b></div>
+        </div>
+        <div class="case__text">
+          <p class="case__note">Авто-воронка: от первого касания до оплаты без менеджера</p>
+          <p class="case__title">Воронки под ключ</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== Q&A ===== -->
+  <section class="qa" id="qa">
+    <div class="qa__head reveal">
+      <h2>Есть вопросы?</h2>
+      <p>Это хорошо. Коротко ответили на самое частое про ботов, чтобы не тратить ваше время.</p>
+    </div>
+    <div class="qa__grid">
+      <article class="qa__card reveal">
+        <p class="qa__q">Сколько стоит бот?</p>
+        <p class="qa__a">От 5 000 ₽. Серьёзно</p>
+        <p class="qa__body">Простой бот-визитка или анкета — от 5к. Магазин, воронка, AI-ассистент — считаем по брифу. Цену фиксируем до старта.</p>
+      </article>
+      <article class="qa__card reveal">
+        <p class="qa__q">Как быстро?</p>
+        <p class="qa__a">Простой бот — за 2 дня</p>
+        <p class="qa__body">Бот-анкета — 2 дня, магазин или воронка — от недели, сложный парсер — обсудим. Дедлайн для нас не пожелание.</p>
+      </article>
+      <article class="qa__card reveal">
+        <p class="qa__q">На чём пишете?</p>
+        <p class="qa__a">Python. Без конструкторов</p>
+        <p class="qa__body">aiogram, чистый код, своя база. Бот принадлежит вам целиком: никаких подписок на чужие платформы и «бот перестал работать, потому что сервис закрылся».</p>
+      </article>
+      <article class="qa__card reveal">
+        <p class="qa__q">Где он будет жить?</p>
+        <p class="qa__a">На сервере. Работает 24/7</p>
+        <p class="qa__body">Разворачиваем на хостинге с автоперезапуском и мониторингом. Упал — сам поднялся, мы получили уведомление. Вы даже не заметите.</p>
+      </article>
+      <article class="qa__card reveal">
+        <p class="qa__q">А оплату принимать может?</p>
+        <p class="qa__a">Может. И чеки тоже</p>
+        <p class="qa__body">Telegram Stars, карты, крипта, ЮKassa — подключим что нужно. Плюс CRM, таблицы, уведомления менеджеру — всё в одной связке.</p>
+      </article>
+      <article class="qa__card reveal">
+        <p class="qa__q">AI прикрутить можно?</p>
+        <p class="qa__a">Нужно. Это наш профиль</p>
+        <p class="qa__body">Бот, который понимает свободный текст, отвечает на вопросы клиентов и сам квалифицирует заявки. Наш собственный бот-визитка так и работает.</p>
+      </article>
+      <article class="qa__card reveal">
+        <p class="qa__q">Сопровождение?</p>
+        <p class="qa__a">За деньги — да</p>
+        <p class="qa__body">Следим, обновляем, добавляем функции. Сами писали — сами и поддержим. Скажете «хватит», когда хватит.</p>
+      </article>
+      <article class="qa__card reveal">
+        <p class="qa__q">У меня уже есть бот, но кривой</p>
+        <p class="qa__a">Вылечим или пересоберём</p>
+        <p class="qa__body">Посмотрим код, скажем честно: чинить или проще написать заново. Опыт реанимации чужих ботов есть — его не пропьёшь.</p>
+      </article>
+    </div>
+    <svg class="qa__spark" aria-hidden="true" width="220" height="220" viewBox="0 0 100 100" fill="#232327">
+      <path d="M50 0c4 28 18 42 50 50-32 8-46 22-50 50-4-28-18-42-50-50 32-8 46-22 50-50Z"/>
+    </svg>
+  </section>
+
+  <!-- ===== WHY / ACCORDION ===== -->
+  <section class="why section-card" id="why">
+    <div class="why__head">
+      <p class="why__label reveal">Боты <span class="logo-mark logo-mark--inline"><span class="logo-brace">{</span>P<span class="logo-brace">}</span></span></p>
+      <a href="#gallery" class="btn btn--light reveal">Смотреть кейсы</a>
+    </div>
+    <h2 class="why__title reveal">Мы хороши в автоматизации.<br>И вот почему</h2>
+    <div class="why__cols">
+      <div class="accordion" id="accordion">
+        <div class="acc__item acc__item--open">
+          <button class="acc__head" aria-expanded="true"><span>Пишем на чистом Python</span><span class="acc__icon"></span></button>
+          <div class="acc__body"><p>aiogram, свои базы, свой код. Бот принадлежит вам целиком, масштабируется и не зависит от чужих конструкторов и их тарифов.</p></div>
+        </div>
+        <div class="acc__item">
+          <button class="acc__head" aria-expanded="false"><span>Хостим и мониторим 24/7</span><span class="acc__icon"></span></button>
+          <div class="acc__body"><p>Автоперезапуск, вотчдоги, уведомления о сбоях. Бот живёт на сервере и работает, даже когда у всех выходной.</p></div>
+        </div>
+        <div class="acc__item">
+          <button class="acc__head" aria-expanded="false"><span>Дружим ботов с AI</span><span class="acc__icon"></span></button>
+          <div class="acc__body"><p>Свободный диалог, квалификация заявок, генерация ответов. Подключаем LLM так, чтобы это экономило ваше время, а не съедало бюджет.</p></div>
+        </div>
+        <div class="acc__item">
+          <button class="acc__head" aria-expanded="false"><span>Интегрируем всё со всем</span><span class="acc__icon"></span></button>
+          <div class="acc__body"><p>Оплата, CRM, Google-таблицы, сайт, почта — связываем в одну систему. Заявка с сайта прилетает в Telegram за секунды.</p></div>
+        </div>
+        <div class="acc__item">
+          <button class="acc__head" aria-expanded="false"><span>Сопровождаем, не бросаем</span><span class="acc__icon"></span></button>
+          <div class="acc__body"><p>Запуск — это начало. Следим за работой, добавляем функции, реагируем на изменения Telegram API раньше, чем вы о них узнаете.</p></div>
+        </div>
+      </div>
+      <div class="why__visual" aria-hidden="true">
+        <div class="phone phone--small" data-float="1">
+          <div class="phone__bar"><span class="phone__ava"><span class="logo-brace">{</span>P<span class="logo-brace">}</span></span><span class="phone__name">Магазин-бот<br><em>онлайн</em></span></div>
+          <div class="phone__feed">
+            <div class="bubble bubble--user">Оплатил заказ #142</div>
+            <div class="bubble bubble--bot">Оплата получена ✓ Чек отправил. Доставка в среду</div>
+          </div>
+          <span class="pill-label pill-label--bl">Оплата без менеджера</span>
+        </div>
+        <svg class="why__spark why__spark--green" width="170" height="170" viewBox="0 0 100 100" fill="#3DDC97">
+          <path d="M50 0 60 40 95 25 70 50 95 75 60 60 50 100 40 60 5 75 30 50 5 25 40 40Z"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STACK WORDMARKS ===== -->
+  <section class="brands reveal" aria-label="Технологии">
+    <span class="brand brand--mono">Python</span>
+    <span class="brand brand--bold">aiogram</span>
+    <span class="brand brand--caps">Telegram API</span>
+    <span class="brand brand--mono">Groq / LLM</span>
+    <span class="brand brand--light">Mini Apps</span>
+    <span class="brand brand--caps">Vercel</span>
+  </section>
+
+  <!-- ===== STATEMENT + SCATTERED CARDS ===== -->
+  <section class="cases" id="cases">
+    <svg class="cases__spark reveal" width="36" height="36" viewBox="0 0 100 100" fill="#f2f4f8" aria-hidden="true">
+      <path d="M50 0c4 28 18 42 50 50-32 8-46 22-50 50-4-28-18-42-50-50 32-8 46-22 50-50Z"/>
+    </svg>
+    <h2 class="cases__title reveal">Каждый бот — маленький сотрудник, который не спит, не болеет и не просит зарплату. Вот наша команда:</h2>
+    <div class="scatter" id="scatter">
+      <span class="scatter__card scatter__bot scatter__bot--a" style="--rot:-14deg;--x:-34vw;--y:30px">
+        <svg class="bot-icon" viewBox="0 0 48 48" fill="none" stroke="#3DDC97" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="14" width="32" height="24" rx="7"/><circle cx="18" cy="26" r="2.6" fill="#3DDC97" stroke="none"/><circle cx="30" cy="26" r="2.6" fill="#3DDC97" stroke="none"/><path d="M18 33h12M24 14V7M24 7h6"/></svg>
+        <span>Бот-визитка</span><em>заявки 24/7</em>
+      </span>
+      <span class="scatter__card scatter__bot scatter__bot--b" style="--rot:9deg;--x:-17vw;--y:-26px">
+        <svg class="bot-icon" viewBox="0 0 48 48" fill="none" stroke="#3DDC97" stroke-width="2.4" stroke-linecap="round"><circle cx="24" cy="24" r="4" fill="#3DDC97" stroke="none"/><path d="M24 24 40 12"/><path d="M14 14a14 14 0 0 1 20 0M10 34a14 14 0 0 1 0-20M34 34a14 14 0 0 0 0-20" opacity=".55"/><path d="M7 41a24 24 0 0 1 0-34" opacity=".3"/></svg>
+        <span>Lead Hunter</span><em>парсер заказов</em>
+      </span>
+      <span class="scatter__card scatter__bot scatter__bot--c scatter__card--center" style="--rot:-4deg;--x:0vw;--y:8px">
+        <svg class="bot-icon" viewBox="0 0 48 48" fill="none" stroke="#3DDC97" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="18" width="32" height="22" rx="4"/><path d="M8 26h32M24 18v22"/><path d="M24 18c-7 0-9-9-3-9 4 0 3 9 3 9Zm0 0c7 0 9-9 3-9-4 0-3 9-3 9Z"/></svg>
+        <span>Gift Arbitrage</span><em>NFT-подарки</em>
+        <b class="scatter__tags"><u>Python</u><u>живые данные</u></b>
+      </span>
+      <span class="scatter__card scatter__bot scatter__bot--d" style="--rot:12deg;--x:17vw;--y:-20px">
+        <svg class="bot-icon" viewBox="0 0 48 48" fill="none" stroke="#3DDC97" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M42 8 6 22l12 5 4 12 6-9 10 4 4-26Z"/><path d="M18 27 42 8"/></svg>
+        <span>Content Engine</span><em>автопостинг</em>
+      </span>
+      <span class="scatter__card scatter__bot scatter__bot--e" style="--rot:-11deg;--x:34vw;--y:36px">
+        <svg class="bot-icon" viewBox="0 0 48 48" fill="none" stroke="#3DDC97" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h6l5 22h20l5-16H15"/><circle cx="20" cy="38" r="3.2"/><circle cx="34" cy="38" r="3.2"/></svg>
+        <span>Магазин в TG</span><em>оплата + чеки</em>
+      </span>
+    </div>
+  </section>
+
+  <!-- ===== ESTIMATE / CHAT ===== -->
+  <section class="estimate" id="estimate">
+    <div class="estimate__left">
+      <svg width="44" height="44" viewBox="0 0 100 100" fill="#fff" aria-hidden="true" class="estimate__spark">
+        <path d="M50 0c4 28 18 42 50 50-32 8-46 22-50 50-4-28-18-42-50-50 32-8 46-22 50-50Z"/>
+      </svg>
+      <h2>Мы готовы оценить<br>ваш проект</h2>
+      <p>Попробуйте мини-чат справа или напишите нам напрямую.</p>
+      <a class="btn btn--ghost" href="https://t.me/BaronPavel" target="_blank" rel="noopener">Написать в Telegram</a>
+    </div>
+    <div class="estimate__chat">
+      <div class="chat__top">
+        <button class="chat__chip" id="chatChip">Просто хочу автоматизировать рутину</button>
+        <button class="chat__restart" id="chatRestart">Начать чат заново</button>
+      </div>
+      <div class="chat__feed" id="chatFeed">
+        <div class="chat__msg chat__msg--bot">
+          <div class="chat__ava"><span class="logo-mark logo-mark--chat"><span class="logo-brace">{</span>P<span class="logo-brace">}</span></span><i class="chat__dot"></i></div>
+          <div>
+            <p class="chat__name">Ассистент студии</p>
+            <p class="chat__text">Привет! Давайте сразу выберем, что вам интересно?</p>
+          </div>
+        </div>
+      </div>
+      <div class="chat__choices" id="chatChoices">
+        <button class="chat__choice chat__choice--dark" data-pick="Боты и автоматизация">
+          <svg width="54" height="54" viewBox="0 0 100 100" fill="#fff"><path d="M50 0 58 36 96 28 66 50 96 72 58 64 50 100 42 64 4 72 34 50 4 28 42 36Z"/></svg>
+          <span>Боты</span>
+        </button>
+        <button class="chat__choice" data-pick="Сайт или лендинг">
+          <svg width="54" height="54" viewBox="0 0 100 100" fill="none" stroke="#28282d" stroke-width="6"><circle cx="50" cy="50" r="40"/><ellipse cx="50" cy="50" rx="17" ry="40"/><path d="M12 36h76M12 64h76"/></svg>
+          <span>Сайты</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta" id="contacts">
+    <svg class="cta__spark" width="60" height="60" viewBox="0 0 100 100" fill="#3DDC97" aria-hidden="true">
+      <path d="M50 0 58 36 96 28 66 50 96 72 58 64 50 100 42 64 4 72 34 50 4 28 42 36Z"/>
+    </svg>
+    <div class="cta__inner">
+      <div>
+        <h2>Давайте автоматизируем<br>прямо сейчас!</h2>
+        <p>Расскажите, какая рутина съедает ваше время — предложим бота, который её заберёт. Расчёт бесплатно.</p>
+        <div class="cta__btns">
+          <a class="btn btn--light" href="https://t.me/BaronPavel" target="_blank" rel="noopener">Оставить заявку</a>
+          <a class="btn btn--outline" href="#gallery">Посмотреть кейсы</a>
+        </div>
+      </div>
+      <a class="cta__tg" href="https://t.me/BaronPavel" target="_blank" rel="noopener">@BARONPAVEL</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__cols">
+      <div class="footer__col">
+        <p class="footer__head">Боты</p>
+        <a href="#gallery">Telegram-боты</a>
+        <a href="#gallery">Парсеры</a>
+        <a href="#gallery">Авто-воронки</a>
+        <a href="#qa">FAQ</a>
+      </div>
+      <div class="footer__col">
+        <p class="footer__head">Сайты</p>
+        <a href="index.html#gallery">Лендинги</a>
+        <a href="index.html#gallery">Магазины</a>
+        <a href="index.html#gallery">Корпоративные</a>
+        <a href="index.html">Веб-студия</a>
+      </div>
+      <div class="footer__col">
+        <p class="footer__head">Студия</p>
+        <a href="#why">Почему мы</a>
+        <a href="#cases">Клиенты</a>
+        <a href="https://kwork.ru/user/baronpavel" target="_blank" rel="noopener">Kwork</a>
+        <a href="https://t.me/Pavel_digital_business_bot" target="_blank" rel="noopener">Наш бот</a>
+      </div>
+      <div class="footer__brand">
+        <span class="logo-mark logo-mark--big"><span class="logo-brace">{</span>P<span class="logo-brace">}</span></span>
+        <a class="footer__contact" href="https://t.me/BaronPavel" target="_blank" rel="noopener">@BaronPavel</a>
+        <a class="footer__contact footer__contact--dim" href="https://t.me/Pavel_digital_business_bot" target="_blank" rel="noopener">@Pavel_digital_business_bot</a>
+        <a class="btn btn--outline footer__cta" href="https://t.me/BaronPavel" target="_blank" rel="noopener">Оставить заявку</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Студия {P} · Паша Фёдоров</span>
+      <span>Москва · на связи 24/7</span>
+    </div>
+  </footer>
+
+</main>
+
+<!-- ===== BOTTOM NAV ===== -->
+<nav class="navbar" id="navbar" aria-label="Навигация по странице">
+  <a href="#hero" class="navbar__link navbar__link--active" data-spy="hero">О нас</a>
+  <a href="#gallery" class="navbar__link" data-spy="gallery">Кейсы</a>
+  <a href="#qa" class="navbar__link" data-spy="qa">Вопросы</a>
+  <a href="#why" class="navbar__link" data-spy="why">Почему мы</a>
+  <a href="#contacts" class="navbar__link" data-spy="contacts">Контакты</a>
+  <a href="https://t.me/BaronPavel" target="_blank" rel="noopener" class="navbar__order navbar__order--green">Заказать</a>
+</nav>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

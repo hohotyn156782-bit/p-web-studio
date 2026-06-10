@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Веб-студия {P} — сайты, Telegram-боты и автоматизация под ключ</title>
+<meta name="description" content="Студия {P}: делаем сайты, Telegram-ботов и автоматизацию, которые приносят заявки. Чистый код, премиум-дизайн, сопровождение. Заказывайте у нас.">
+<meta property="og:title" content="Веб-студия {P} — сайты, боты, автоматизация">
+<meta property="og:description" content="Делаем сайты, Telegram-ботов и автоматизацию, которые приносят заявки. Чистый код, премиум-дизайн, сопровождение.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hohotyn156782-bit.github.io/p-web-studio/">
+<meta property="og:image" content="https://hohotyn156782-bit.github.io/p-web-studio/shots/sonoria.jpg">
+<link rel="icon" type="image/png" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="header__inner">
+    <a class="header__logo" href="#top" aria-label="Студия {P}">
+      <span class="logo-mark"><span class="logo-brace">{</span>P<span class="logo-brace">}</span></span>
+    </a>
+    <nav class="header__switch" aria-label="Направления">
+      <a href="#gallery" class="switch__tab switch__tab--active">Сайты</a>
+      <span class="switch__knob" aria-hidden="true">
+        <svg width="14" height="18" viewBox="0 0 14 18" fill="none"><path d="M8.5 1 2 10.5h4L5.5 17 12 7.5H8L8.5 1Z" fill="currentColor"/></svg>
+      </span>
+      <a href="#estimate" class="switch__tab">Боты</a>
+    </nav>
+    <button class="header__burger" id="burgerBtn" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== MENU OVERLAY ===== -->
+<div class="menu" id="menuOverlay" aria-hidden="true">
+  <nav class="menu__nav">
+    <a href="#hero" class="menu__link">Студия</a>
+    <a href="#gallery" class="menu__link">Кейсы</a>
+    <a href="#qa" class="menu__link">Вопросы</a>
+    <a href="#why" class="menu__link">Почему мы</a>
+    <a href="#estimate" class="menu__link">Оценка проекта</a>
+    <a href="#contacts" class="menu__link">Контакты</a>
+  </nav>
+  <div class="menu__contacts">
+    <a href="https://t.me/BaronPavel" target="_blank" rel="noopener">@BaronPavel</a>
+    <a href="https://kwork.ru/user/baronpavel" target="_blank" rel="noopener">kwork.ru/user/baronpavel</a>
+    <a class="btn btn--primary" href="https://t.me/BaronPavel" target="_blank" rel="noopener">Оставить заявку</a>
+  </div>
+</div>
+
+<main id="top">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero section-card" id="hero">
+    <div class="hero__content">
+      <h1 class="hero__label">Веб-студия</h1>
+      <p class="hero__title">
+        <span class="line">Делаем сайты и ботов,</span>
+        <span class="line">которые приносят заявки.</span>
+        <span class="line">Заходите — покажем</span>
+      </p>
+      <a href="#gallery" class="btn btn--primary hero__cta">Смотреть все кейсы</a>
+    </div>
+    <div class="hero__visual" aria-hidden="true">
+      <div class="hero__shot hero__shot--phone" data-float="1">
+        <img src="shots/venom-ink.jpg" alt="" loading="eager">
+        <span class="pill-label pill-label--tl">Адаптив без компромиссов</span>
+      </div>
+      <div class="hero__shot hero__shot--laptop" data-float="2">
+        <img src="shots/mines.jpg" alt="" loading="lazy">
+        <span class="pill-label pill-label--br">Анимации без тормозов</span>
+      </div>
+      <svg class="hero__globe" width="74" height="74" viewBox="0 0 74 74" fill="none" stroke="#8a8f9c" stroke-width="3">
+        <circle cx="37" cy="37" r="33"/>
+        <ellipse cx="37" cy="37" rx="14" ry="33"/>
+        <path d="M6 26h62M6 48h62"/>
+      </svg>
+      <svg class="hero__spark hero__spark--grey" width="120" height="120" viewBox="0 0 100 100" fill="#e3e6ec">
+        <path d="M50 0c4 28 18 42 50 50-32 8-46 22-50 50-4-28-18-42-50-50 32-8 46-22 50-50Z"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== FILTERS + GALLERY ===== -->
+  <section class="gallery" id="gallery">
+    <div class="filters reveal">
+      <span class="filter">Сайты</span>
+      <span class="filter">Telegram-боты</span>
+      <span class="filter">Лендинги</span>
+      <span class="filter">E-commerce</span>
+      <span class="filter">Автоматизация</span>
+      <span class="filter">Парсеры</span>
+      <span class="filter">Дизайн</span>
+      <span class="filter">SEO</span>
+    </div>
+
+    <a class="case case--wide reveal" href="https://hohotyn156782-bit.github.io/sonoria/" target="_blank" rel="noopener">
+      <img src="shots/sonoria.jpg" alt="Сайт музыкальной академии SONORIA" loading="lazy">
+      <div class="case__text">
+        <p class="case__note">Самый музыкальный. Каждая секция звучит по-своему</p>
+        <p class="case__title">Академия SONORIA</p>
+      </div>
+    </a>
+
+    <div class="case-row">
+      <a class="case reveal" href="https://hohotyn156782-bit.github.io/luxe/" target="_blank" rel="noopener">
+        <img src="shots/luxe.jpg" alt="Fashion e-commerce LUXE" loading="lazy">
+        <div class="case__text">
+          <p class="case__note">Магазин, в котором хочется задержаться</p>
+          <p class="case__title">LUXE Fashion</p>
+        </div>
+      </a>
+      <a class="case reveal" href="https://hohotyn156782-bit.github.io/patina/" target="_blank" rel="noopener">
+        <img src="shots/patina.jpg" alt="Сайт PATINA" loading="lazy">
+        <div class="case__text">
+          <p class="case__note">Тихая роскошь. Ничего лишнего — и всё на месте</p>
+          <p class="case__title">PATINA</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="case-row case-row--uneven">
+      <a class="case reveal" href="https://hohotyn156782-bit.github.io/vitalis/" target="_blank" rel="noopener">
+        <img src="shots/vitalis.jpg" alt="Фитнес-платформа VITALIS" loading="lazy">
+        <div class="case__text">
+          <p class="case__note">Целая платформа. Дашборды, программы, прогресс</p>
+          <p class="case__title">VITALIS Fitness</p>
+        </div>
+      </a>
+      <a class="case reveal" href="https://hohotyn156782-bit.github.io/eclat/" target="_blank" rel="noopener">
+        <img src="shots/eclat.jpg" alt="Парфюмерия ÉCLAT" loading="lazy">
+        <div class="case__text">
+          <p class="case__note">Парфюм в цифре. Передали аромат вёрсткой</p>
+          <p class="case__title">ÉCLAT Parfums</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== Q&A ===== -->
+  <section class="qa" id="qa">
+    <div class="qa__head reveal">
+      <h2>Есть вопросы?</h2>
+      <p>Это хорошо. Коротко ответили на самое частое, чтобы не тратить ваше время.</p>
+    </div>
+    <div class="qa__grid">
+      <article class="qa__card reveal">
+        <p class="qa__q">Сколько стоит сайт?</p>
+        <p class="qa__a">Лендинг — от 30 тысяч. Бот — от 5</p>
+        <p class="qa__body">Точная цена появляется после короткого брифа: объём, сроки, интеграции. Считаем честно и фиксируем до старта — без «внезапных» доплат в середине работы.</p>
+      </article>
+      <article class="qa__card reveal">
+        <p class="qa__q">На чём ваши сайты?</p>
+        <p class="qa__a">Чистый код. Без конструкторов</p>
+        <p class="qa__body">Пишем руками: HTML, CSS, JS, когда нужно — Next.js. Поэтому сайты быстрые, лёгкие и не зависят от чужих платформ и подписок.</p>
+      </article>
+      <article class="qa__card reveal">
+        <p class="qa__q">Нужно переделать старый сайт. Это к вам?</p>
+        <p class="qa__a">К нам. Старое просто удалим</p>
+        <p class="qa__body">Заберём всё лучшее — структуру, тексты, медиа — и пересоберём заново. А если брать нечего, сделаем с нуля: опыт есть, его не пропьёшь.</p>
+      </article>
+      <article class="qa__card reveal">
+        <p class="qa__q">Сопровождаете после запуска?</p>
+        <p class="qa__a">За деньги — да</p>
+        <p class="qa__body">Хостинг, обновления, новые блоки и функционал — берём на себя. Сами писали, сами и сопровождаем. Скажете «хватит», когда хватит.</p>
+      </article>
+      <article class="qa__card reveal">
+        <p class="qa__q">А боты? Это вообще ваше?</p>
+        <p class="qa__a">О. Это вообще наше любимое</p>
+        <p class="qa__body">Telegram-боты, парсеры, авто-воронки, интеграции с оплатой и CRM. Связываем сайт и бота в одну систему, которая собирает заявки 24/7.</p>
+      </article>
+      <article class="qa__card reveal">
+        <p class="qa__q">Как с метриками и SEO?</p>
+        <p class="qa__a">Естественно и обязательно</p>
+        <p class="qa__body">Метрики нужны не только вам — по ним мы сами видим, что всё работает. Подключаем аналитику, настраиваем базовое SEO и шлём понятный отчёт.</p>
+      </article>
+      <article class="qa__card reveal">
+        <p class="qa__q">Сколько ждать?</p>
+        <p class="qa__a">Лендинг — дни, не месяцы</p>
+        <p class="qa__body">Лендинг — от 3 дней, бот — от 2, магазин или платформа — от пары недель. Сроки называем до старта и держим: дедлайн для нас не пожелание.</p>
+      </article>
+      <article class="qa__card reveal">
+        <p class="qa__q">Дизайн. Ну дизайн</p>
+        <p class="qa__a">Без шаблонов. Совсем</p>
+        <p class="qa__body">Каждый проект собираем с нуля под нишу и бренд: типографика, палитра, анимации. Никаких «как у всех» — это видно по кейсам выше.</p>
+      </article>
+    </div>
+    <svg class="qa__spark" aria-hidden="true" width="220" height="220" viewBox="0 0 100 100" fill="#e7eaf1">
+      <path d="M50 0c4 28 18 42 50 50-32 8-46 22-50 50-4-28-18-42-50-50 32-8 46-22 50-50Z"/>
+    </svg>
+  </section>
+
+  <!-- ===== WHY / ACCORDION ===== -->
+  <section class="why section-card" id="why">
+    <div class="why__head">
+      <p class="why__label reveal">Веб-студия <span class="logo-mark logo-mark--inline"><span class="logo-brace">{</span>P<span class="logo-brace">}</span></span></p>
+      <a href="#gallery" class="btn btn--dark reveal">Смотреть кейсы</a>
+    </div>
+    <h2 class="why__title reveal">Мы хороши в вебе и цифровых продуктах.<br>И вот почему</h2>
+    <div class="why__cols">
+      <div class="accordion" id="accordion">
+        <div class="acc__item">
+          <button class="acc__head" aria-expanded="false"><span>Пишем код сами</span><span class="acc__icon"></span></button>
+          <div class="acc__body"><p>Никаких конструкторов и чужих шаблонов. Каждая строка — наша, поэтому мы отвечаем за скорость, безопасность и можем доработать что угодно.</p></div>
+        </div>
+        <div class="acc__item acc__item--open">
+          <button class="acc__head" aria-expanded="true"><span>Любим адаптив</span><span class="acc__icon"></span></button>
+          <div class="acc__body"><p>Наши продукты одинаково хороши на любом экране. Мы тратим на дизайн и вёрстку столько времени, что они обязаны быть красивыми всегда и везде. В любое время дня и ночи. Без оправданий.</p></div>
+        </div>
+        <div class="acc__item">
+          <button class="acc__head" aria-expanded="false"><span>Сопровождаем, не бросаем</span><span class="acc__icon"></span></button>
+          <div class="acc__body"><p>Запуск — это начало, а не конец. Хостинг, контент, новые фичи, мониторинг — остаёмся рядом, пока мы вам нужны.</p></div>
+        </div>
+        <div class="acc__item">
+          <button class="acc__head" aria-expanded="false"><span>Автоматизируем рутину</span><span class="acc__icon"></span></button>
+          <div class="acc__body"><p>Боты, парсеры, авто-воронки и интеграции. Связываем сайт с Telegram и CRM, чтобы заявки обрабатывались сами — даже когда вы спите.</p></div>
+        </div>
+        <div class="acc__item">
+          <button class="acc__head" aria-expanded="false"><span>Дизайним классный дизайн</span><span class="acc__icon"></span></button>
+          <div class="acc__body"><p>Типографика, сетки, моушн — всё с нуля под ваш бренд. Дизайн мы вообще любим, поэтому продолжаем дорабатывать визуал и после запуска.</p></div>
+        </div>
+      </div>
+      <div class="why__visual" aria-hidden="true">
+        <div class="why__shot why__shot--a" data-float="1">
+          <img src="shots/heart.jpg" alt="" loading="lazy">
+        </div>
+        <div class="why__shot why__shot--b" data-float="2">
+          <img src="shots/lingua.jpg" alt="" loading="lazy">
+          <span class="pill-label pill-label--bl">Можем в резиновую вёрстку</span>
+        </div>
+        <svg class="why__spark why__spark--green" width="170" height="170" viewBox="0 0 100 100" fill="#3DDC97">
+          <path d="M50 0 60 40 95 25 70 50 95 75 60 60 50 100 40 60 5 75 30 50 5 25 40 40Z"/>
+        </svg>
+        <svg class="why__globe" width="64" height="64" viewBox="0 0 74 74" fill="none" stroke="#9aa0ad" stroke-width="3">
+          <circle cx="37" cy="37" r="33"/>
+          <ellipse cx="37" cy="37" rx="14" ry="33"/>
+          <path d="M6 26h62M6 48h62"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECT WORDMARKS ===== -->
+  <section class="brands reveal" aria-label="Наши проекты">
+    <span class="brand brand--serif">SONORIA</span>
+    <span class="brand brand--light">ÉCLAT</span>
+    <span class="brand brand--mono">PATINA</span>
+    <span class="brand brand--bold">LUXE</span>
+    <span class="brand brand--caps">VITALIS</span>
+    <span class="brand brand--serif">LinguaPulse</span>
+  </section>
+
+  <!-- ===== STATEMENT + SCATTERED CARDS ===== -->
+  <section class="cases" id="cases">
+    <svg class="cases__spark reveal" width="36" height="36" viewBox="0 0 100 100" fill="#161c2d" aria-hidden="true">
+      <path d="M50 0c4 28 18 42 50 50-32 8-46 22-50 50-4-28-18-42-50-50 32-8 46-22 50-50Z"/>
+    </svg>
+    <h2 class="cases__title reveal">Мы любим наших клиентов и выстраиваем с ними долгие отношения. Смотрите, что у нас получается:</h2>
+    <div class="scatter" id="scatter">
+      <a class="scatter__card" href="https://hohotyn156782-bit.github.io/voyage-elite/" target="_blank" rel="noopener" style="--rot:-14deg;--x:-34vw;--y:30px">
+        <img src="shots/voyage.jpg" alt="VOYAGE ELITE" loading="lazy"><span>Voyage Elite</span>
+      </a>
+      <a class="scatter__card" href="https://hohotyn156782-bit.github.io/heart-salon/" target="_blank" rel="noopener" style="--rot:9deg;--x:-17vw;--y:-26px">
+        <img src="shots/heart.jpg" alt="Салон Heart" loading="lazy"><span>Heart Beauty</span>
+      </a>
+      <a class="scatter__card scatter__card--center" href="https://hohotyn156782-bit.github.io/venom-ink/" target="_blank" rel="noopener" style="--rot:-4deg;--x:0vw;--y:8px">
+        <img src="shots/venom-ink.jpg" alt="Тату-студия VENOM INK" loading="lazy"><span>Venom Ink</span>
+        <em class="scatter__tags"><i>UX-исследования</i><i>Разработка сайта</i></em>
+      </a>
+      <a class="scatter__card" href="https://hohotyn156782-bit.github.io/pet-shop/" target="_blank" rel="noopener" style="--rot:12deg;--x:17vw;--y:-20px">
+        <img src="shots/petshop.jpg" alt="Зоомагазин" loading="lazy"><span>Pet Shop</span>
+      </a>
+      <a class="scatter__card" href="https://hohotyn156782-bit.github.io/nova-studio/" target="_blank" rel="noopener" style="--rot:-11deg;--x:34vw;--y:36px">
+        <img src="shots/nova.jpg" alt="NOVA Studio" loading="lazy"><span>Nova Studio</span>
+      </a>
+    </div>
+    <svg class="cases__globe" aria-hidden="true" width="84" height="84" viewBox="0 0 74 74" fill="none" stroke="#c2c6cf" stroke-width="3">
+      <circle cx="37" cy="37" r="33"/>
+      <ellipse cx="37" cy="37" rx="14" ry="33"/>
+      <path d="M6 26h62M6 48h62"/>
+    </svg>
+  </section>
+
+  <!-- ===== ESTIMATE / CHAT ===== -->
+  <section class="estimate" id="estimate">
+    <div class="estimate__left">
+      <svg width="44" height="44" viewBox="0 0 100 100" fill="#fff" aria-hidden="true" class="estimate__spark">
+        <path d="M50 0c4 28 18 42 50 50-32 8-46 22-50 50-4-28-18-42-50-50 32-8 46-22 50-50Z"/>
+      </svg>
+      <h2>Мы готовы оценить<br>ваш проект</h2>
+      <p>Попробуйте мини-чат справа или напишите нам напрямую.</p>
+      <a class="btn btn--ghost" href="https://t.me/BaronPavel" target="_blank" rel="noopener">Написать в Telegram</a>
+    </div>
+    <div class="estimate__chat">
+      <div class="chat__top">
+        <button class="chat__chip" id="chatChip">Просто хочу сделать красиво</button>
+        <button class="chat__restart" id="chatRestart">Начать чат заново</button>
+      </div>
+      <div class="chat__feed" id="chatFeed">
+        <div class="chat__msg chat__msg--bot">
+          <div class="chat__ava"><span class="logo-mark logo-mark--chat"><span class="logo-brace">{</span>P<span class="logo-brace">}</span></span><i class="chat__dot"></i></div>
+          <div>
+            <p class="chat__name">Ассистент студии</p>
+            <p class="chat__text">Привет! Давайте сразу выберем, что вам интересно?</p>
+          </div>
+        </div>
+      </div>
+      <div class="chat__choices" id="chatChoices">
+        <button class="chat__choice chat__choice--dark" data-pick="Боты и автоматизация">
+          <svg width="54" height="54" viewBox="0 0 100 100" fill="#fff"><path d="M50 0 58 36 96 28 66 50 96 72 58 64 50 100 42 64 4 72 34 50 4 28 42 36Z"/></svg>
+          <span>Боты</span>
+        </button>
+        <button class="chat__choice" data-pick="Сайт или лендинг">
+          <svg width="54" height="54" viewBox="0 0 100 100" fill="none" stroke="#28282d" stroke-width="6"><circle cx="50" cy="50" r="40"/><ellipse cx="50" cy="50" rx="17" ry="40"/><path d="M12 36h76M12 64h76"/></svg>
+          <span>Сайты</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta" id="contacts">
+    <svg class="cta__spark" width="60" height="60" viewBox="0 0 100 100" fill="#3DDC97" aria-hidden="true">
+      <path d="M50 0 58 36 96 28 66 50 96 72 58 64 50 100 42 64 4 72 34 50 4 28 42 36Z"/>
+    </svg>
+    <div class="cta__inner">
+      <div>
+        <h2>Давайте знакомиться<br>прямо сейчас!</h2>
+        <p>Подготовим расчёт по вашей задаче и покажем, что можно улучшить — бесплатно.</p>
+        <div class="cta__btns">
+          <a class="btn btn--light" href="https://t.me/BaronPavel" target="_blank" rel="noopener">Оставить заявку</a>
+          <a class="btn btn--outline" href="#gallery">Посмотреть кейсы</a>
+        </div>
+      </div>
+      <a class="cta__tg" href="https://t.me/BaronPavel" target="_blank" rel="noopener">@BARONPAVEL</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__cols">
+      <div class="footer__col">
+        <p class="footer__head">Сайты</p>
+        <a href="#gallery">Лендинги</a>
+        <a href="#gallery">Магазины</a>
+        <a href="#gallery">Корпоративные</a>
+        <a href="#qa">FAQ</a>
+      </div>
+      <div class="footer__col">
+        <p class="footer__head">Боты</p>
+        <a href="#estimate">Telegram-боты</a>
+        <a href="#estimate">Парсеры</a>
+        <a href="#estimate">Авто-воронки</a>
+        <a href="#estimate">Интеграции</a>
+      </div>
+      <div class="footer__col">
+        <p class="footer__head">Студия</p>
+        <a href="#why">Почему мы</a>
+        <a href="#cases">Клиенты</a>
+        <a href="https://kwork.ru/user/baronpavel" target="_blank" rel="noopener">Kwork</a>
+        <a href="https://t.me/Pavel_digital_business_bot" target="_blank" rel="noopener">Наш бот</a>
+      </div>
+      <div class="footer__brand">
+        <span class="logo-mark logo-mark--big"><span class="logo-brace">{</span>P<span class="logo-brace">}</span></span>
+        <a class="footer__contact" href="https://t.me/BaronPavel" target="_blank" rel="noopener">@BaronPavel</a>
+        <a class="footer__contact footer__contact--dim" href="https://t.me/Pavel_digital_business_bot" target="_blank" rel="noopener">@Pavel_digital_business_bot</a>
+        <a class="btn btn--outline footer__cta" href="https://t.me/BaronPavel" target="_blank" rel="noopener">Оставить заявку</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Студия {P} · Паша Фёдоров</span>
+      <span>Москва · на связи 24/7</span>
+    </div>
+  </footer>
+
+</main>
+
+<!-- ===== BOTTOM NAV ===== -->
+<nav class="navbar" id="navbar" aria-label="Навигация по странице">
+  <a href="#hero" class="navbar__link navbar__link--active" data-spy="hero">О нас</a>
+  <a href="#gallery" class="navbar__link" data-spy="gallery">Кейсы</a>
+  <a href="#qa" class="navbar__link" data-spy="qa">Вопросы</a>
+  <a href="#why" class="navbar__link" data-spy="why">Почему мы</a>
+  <a href="#contacts" class="navbar__link" data-spy="contacts">Контакты</a>
+  <a href="https://t.me/BaronPavel" target="_blank" rel="noopener" class="navbar__order">Заказать</a>
+</nav>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
